@@ -2,11 +2,17 @@ html{
   scroll-behavior: smooth;
 }
 
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .wrapper {
-  margin: 0 auto;
-  width: 80%;
+  width: 100%;
   background-color: rgb(252, 252, 167);
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: rgb(109, 162, 4);
 }
 
@@ -27,14 +33,15 @@ html{
   display: none;
 }
 
-
+.img-content {
+  width: 90%;
+}
 
 .bayan-radio:checked ~ .bayan-image {
   display: flex;
   align-items: center;
   height: fit-content;
   justify-content: center;
-  border: 1px solid #000;
   transform: scaleY(1);
   transition: transform linear 1s;
 }
@@ -51,6 +58,7 @@ transition: all ease 0.2s;
 .bayan-title {
   display: flex;
   justify-content: space-between;
+  padding: 0.5rem;
 }
 
 .bayan-item:active >.bayan-title {
@@ -69,9 +77,30 @@ color: rgb(109, 162, 4);
   opacity: 0.5;
 }
 
+@media screen and (min-width: 600px){
+  .wrapper {
+    font-size: 3rem;
+  }
+
+  .img-content {
+    width: 50%;
+  }
+}
+
 @media screen and (min-width: 1000px) {
+  .wrapper {
+    font-size: 2rem;
+    margin: 0 auto;
+    width: 80%;
+  }
+
   .wrapper:hover {
     color: black;
+    cursor: pointer;
+  }
+
+  .bayan-title {
+    cursor: pointer;
   }
 
   .wrapper:hover>.bayan-item>.bayan-title>.title-icon {
@@ -87,7 +116,6 @@ color: rgb(109, 162, 4);
     justify-content: center;
     height: fit-content;
     transform: scaleY(1);
-    border: 1px solid #000;
     transition: transform linear 1s;
     align-items: center;
     justify-content: center;
