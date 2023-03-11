@@ -5,8 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cssBayan</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div class="wrapper">
+
+    <div class="bayan-item" id="balance-close">
+      <input class="bayan-radio" type="radio" name="bayan" id="elem1" checked>
+      <label class="bayan-title" for="elem1">
+        <span class="title-text">Work-life balance</span> 
+        <span class="title-icon"></span>
+      </label>
+      <div id="balance" class="bayan-image">
+        <img src="assets/balance.png" alt="balance">
+      </div>
+    </div>
+    
+    <div class="bayan-item" id="copy-close">
+      <input class="bayan-radio" type="radio" name="bayan" id="elem2">
+      <label class="bayan-title" for="elem2">
+        <span class="title-text">You can't just copy and paste CSS</span>
+        <span class="title-icon"></span>
+      </label>
+      <div id="copy" class="bayan-image">
+        <img src="assets/copyPasteCSS.png" alt="copy">
+      </div>
+    </div>
+    
+  </div>
 </body>
 </html>

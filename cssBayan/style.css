@@ -1,0 +1,100 @@
+html{
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+  background-color: rgb(252, 252, 167);
+  font-size: 2rem;
+  color: rgb(109, 162, 4);
+}
+
+.bayan-radio {
+  display: none;
+}
+
+.bayan-image {
+  display: flex;
+  align-items: center;
+  height: 0;
+  justify-content: center;
+  transform: scaleY(0);
+  /*transition: all linear 0.2s;*/
+}
+
+.title-icon {
+  display: none;
+}
+
+
+
+.bayan-radio:checked ~ .bayan-image {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  justify-content: center;
+  border: 1px solid #000;
+  transform: scaleY(1);
+  transition: transform linear 1s;
+}
+
+.bayan-radio:checked ~ .bayan-title {
+color: black;
+}
+
+.bayan-radio:checked ~ .title-icon {
+transform: rotate(45deg);
+transition: all ease 0.2s;
+}
+
+.bayan-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bayan-item:active >.bayan-title {
+color: rgb(109, 162, 4);
+}
+
+.bayan-item:active>.bayan-title>.title-icon {
+  display: block;
+  background: url(assets/icons8-plus-math-30-green.png) center no-repeat !important;
+  transform: rotate(45deg);
+  width: 2rem;
+  height: 2rem;
+}
+
+.bayan-item:active>.bayan-image {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1000px) {
+  .wrapper:hover {
+    color: black;
+  }
+
+  .wrapper:hover>.bayan-item>.bayan-title>.title-icon {
+    display: block;
+    background: url(assets/icons8-plus-math-30.png) center no-repeat;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .bayan-item:hover>.bayan-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    transform: scaleY(1);
+    border: 1px solid #000;
+    transition: transform linear 1s;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bayan-item:hover>.bayan-title>.title-icon {
+    transform: rotate(45deg);
+    transition: all ease 0.2s;
+  }
+}
