@@ -1,0 +1,135 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: black !important;
+  text-align: center;
+  margin-top: 0;
+  cursor: default;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: rgb(252, 252, 167);
+  font-size: 1.4rem;
+  color: rgb(109, 162, 4);
+}
+
+.bayan-radio {
+  display: none;
+}
+
+.bayan-image {
+  display: flex;
+  align-items: center;
+  height: 0;
+  justify-content: center;
+  transform: scaleY(0);
+  /*transition: all linear 0.2s;*/
+}
+
+.title-icon {
+  display: none;
+}
+
+.img-content {
+  width: 90%;
+}
+
+.bayan-radio:checked ~ .bayan-image {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  justify-content: center;
+  transform: scaleY(1);
+  transition: transform linear 1s;
+}
+
+.bayan-radio:checked ~ .bayan-title {
+color: black;
+}
+
+.bayan-radio:checked ~ .title-icon {
+transform: rotate(45deg);
+transition: all ease 0.2s;
+}
+
+.bayan-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.bayan-item:active >.bayan-title {
+color: rgb(109, 162, 4);
+}
+
+.bayan-item:active>.bayan-title>.title-icon {
+  display: block;
+  background: url(assets/icons8-plus-math-30-green.png) center no-repeat !important;
+  transform: rotate(45deg);
+  width: 2rem;
+  height: 2rem;
+}
+
+.bayan-item:active>.bayan-image {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 600px){
+  .wrapper {
+    font-size: 3rem;
+  }
+
+  .img-content {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    font-size: 2rem;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .wrapper:hover {
+    color: black;
+    cursor: pointer;
+  }
+
+  .bayan-title {
+    cursor: pointer;
+  }
+
+  .wrapper:hover>.bayan-item>.bayan-title>.title-icon {
+    display: block;
+    background: url(assets/icons8-plus-math-30.png) center no-repeat;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .bayan-item:hover>.bayan-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    transform: scaleY(1);
+    transition: transform linear 1s;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bayan-item:hover>.bayan-title>.title-icon {
+    transform: rotate(45deg);
+    transition: all ease 0.2s;
+  }
+}
